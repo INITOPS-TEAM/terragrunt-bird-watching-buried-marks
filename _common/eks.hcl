@@ -8,6 +8,7 @@ dependency "vpc" {
   mock_outputs = {
     compute_subnet_ids = ["vpc-mock-id-1", "vpc-mock-id-2", "vpc-mock-id-3"]
     vpc_id             = "vpc-id-mock"
+    eks_subnet_ids     = ["eks-subnet-mock-id-1", "eks-subnet-mock-id-2", "eks-subnet-mock-id-3"]
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
 }
@@ -16,7 +17,7 @@ dependency "jenkins" {
   config_path = "../../jenkins"
 
   mock_outputs = {
-    jenkins_role_arn = "jenkins-role-arn-mock"
+    jenkins_role_arn = "arn:aws:iam::012345678900:role/mock-jenkins-role"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
 }

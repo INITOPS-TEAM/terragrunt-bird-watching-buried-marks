@@ -6,7 +6,8 @@ dependency "vpc" {
   config_path = "../../vpc"
 
   mock_outputs = {
-    compute_subnet_id = "vpc-mock-id"
+    compute_subnet_id = "compute-subnet-mock-id"
+    public_subnet_id  = "public-subnet-mock-id"
     vpc_cidr          = "10.20.0.0/16"
     vpc_id            = "vpc-id-mock"
   }

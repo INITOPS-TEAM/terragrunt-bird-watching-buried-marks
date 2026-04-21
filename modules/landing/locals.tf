@@ -1,0 +1,8 @@
+locals {
+  common_tags = {
+    Project     = var.project_name
+    Environment = var.env
+    ManagedBy   = "Terraform"
+    Component   = "LandingPage"
+  }
+}
